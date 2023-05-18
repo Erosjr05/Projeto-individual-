@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+</head>
+<body>
+  <h1>Quiz</h1>
+
+  <form id="quiz-form">
+    <h2>Pergunta 1:</h2>
+    <p>Qual é a capital da França?</p>
+    <label>
+      <input type="radio" name="pergunta1" value="a">
+      a) Paris
+    </label><br>
+    <label>
+      <input type="radio" name="pergunta1" value="b">
+      b) Londres
+    </label><br>
+    <label>
+      <input type="radio" name="pergunta1" value="c">
+      c) Roma
+    </label><br><br>
+
+    <!-- Repita as perguntas e opções para as perguntas restantes -->
+    <h2>Pergunta 2:</h2>
+    <p>Qual é a capital do Brasil?</p>
+    <label>
+      <input type="radio" name="pergunta2" value="a">
+      a) São Paulo
+    </label><br>
+    <label>
+      <input type="radio" name="pergunta2" value="b">
+      b) Rio de Janeiro
+    </label><br>
+    <label>
+      <input type="radio" name="pergunta2" value="c">
+      c) Brasília
+    </label><br><br>
+
+    <!-- Repita as perguntas e opções para as perguntas restantes -->
+
+    <input type="submit" value="Enviar">
+  </form>
+
+  <script>
+    document.getElementById('quiz-form').addEventListener('submit', function(e) {
+      e.preventDefault(); // Impede o envio do formulário
+
+      // Pode adicionar aqui a lógica para verificar as respostas e calcular a pontuação
+
+      // Exemplo de como pegar as respostas selecionadas
+      var respostas = document.querySelectorAll('input[type="radio"]:checked');
+      var pontuacao = respostas.length;
+
+      // Exemplo de como exibir a pontuação
+      alert('Sua pontuação: ' + pontuacao);
+    });
+  </script>
+</body>
+</html>
